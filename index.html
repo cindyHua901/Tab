@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<head>
+    <title>tab选项卡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul,li{
+            list-style: none;
+        }
+        body{
+            padding: 100px;;background-color:#323232;font-size:12px;font-family: "微软雅黑" ;color:#fff
+        }
+        img{
+            width: 290px;height: 200px;
+        }
+        .tab-view{
+            float: left;margin-right: 50px
+        }
+    </style>
+    <link rel="stylesheet" href="css/tab.css">
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/tab.js"></script>
+</head>
+<body>
+<div class="tab-view">
+    <p>没有配置任何参数</p>
+        <div class="tab" id="tab1">
+                <ul class="tab-nav">
+                    <li class="actived"><a href="javascript:void(0)">新闻</a></li>
+                    <li><a href="#">娱乐</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">科技</a></li>
+                </ul>
+                <div class="content-wrap">
+                    <div class="content-item current">
+                        <img src="img\1.jpg" alt="tu1">
+                    </div>
+                    <div class="content-item">
+                        <img src="img\2.jpg" alt="tu1">
+                    </div>
+                    <div class="content-item">
+                        <img src="img\3.jpg" alt="tu1">
+                    </div>
+                    <div class="content-item">
+                        <img src="img\4.jpg" alt="tu1">
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="tab-view">
+    <p>触发事件click,切换效果为淡入淡出,3秒自动切换</p>
+        <div class="tab" id="tab2">
+                <ul class="tab-nav">
+                    <li class="actived"><a href="javascript:void(0)">新闻</a></li>
+                    <li><a href="#">娱乐</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">科技</a></li>
+                </ul>
+                <div class="content-wrap">
+                    <div class="content-item current">
+                        <img src="img\1.jpg" alt="tu1">
+                    </div>
+                    <div class="content-item">
+                        <img src="img\2.jpg" alt="tu1">
+                    </div>
+                    <div class="content-item">
+                        <img src="img\3.jpg" alt="tu1">
+                    </div>
+                    <div class="content-item">
+                        <img src="img\4.jpg" alt="tu1">
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="tab-view">
+    <p>默认显示第2个tab</p>
+        <div class="tab" id="tab3">
+                <ul class="tab-nav">
+                    <li class="actived"><a href="javascript:void(0)">新闻</a></li>
+                    <li><a href="#">娱乐</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">科技</a></li>
+                </ul>
+                <div class="content-wrap">
+                    <div class="content-item current">
+                        <img src="img\1.jpg" alt="tu1">
+                    </div>
+                    <div class="content-item">
+                        <img src="img\2.jpg" alt="tu1">
+                    </div>
+                    <div class="content-item">
+                        <img src="img\3.jpg" alt="tu1">
+                    </div>
+                    <div class="content-item">
+                        <img src="img\4.jpg" alt="tu1">
+                    </div>
+                </div>
+            </div>
+</div>
+
+<script>
+    $(function(){
+        //Tab
+        var tab =  $("#tab1").Tab();
+
+    //     var tab2 =  $("#tab2").Tab({
+    //     triggerType:'click',
+    //     effect:"fade",
+    //     auto:3000, //默认显示哪一个tab
+    //     name:'tab2'
+    //    });
+
+      
+
+      
+
+       var tab3 =  $("#tab3").Tab({
+        invoke:2, //默认显示哪一个tab
+        name:"tab3"
+       });
+    });
+</script>
+</body>
+</html>
